@@ -4,10 +4,11 @@ body{
     background-color: #0D0D0D;
 }
 
-#container{
+.container{
     width: 1400px;
     margin-left: auto;
     margin-right: auto;
+    float: top;
     color: #0D0D0D;
 }
 
@@ -27,8 +28,8 @@ nav{
     background-color: #401201;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding-inline: 50px;
+    justify-content: space-around;
+    /*padding-inline: 50px;*/
     padding-block: 20px;
 }
 
@@ -56,13 +57,15 @@ nav{
     color: white ;
     font-size: 25px;
     float: left;
-    min-width: 50px;
+    width: 40%;
+    height: 80%;
     padding: 10px;
     padding-inline: 60px;
-    border-right: 3px dotted #ffffff;
-    border-left: 3px dotted #ffffff;
+    border-right: 3px solid #ffffff;
+    border-left: 3px solid #ffffff;
     transition: background-color 0.5s;
     box-shadow: 5px 5px 10px #0D0D0D;
+    text-align: center;
 }
 
 #last-option{
@@ -138,7 +141,7 @@ textarea{
     height: 100px;
 }
 
-body>footer{
+footer{
     color: white;
     font-size: 20px;
     background-color: #0D0D0D;
@@ -172,6 +175,10 @@ li {
 }
 
 input[type="radio"] {
+    display: none;
+}
+
+input[type="checkbox"] {
     display: none;
 }
 
@@ -263,6 +270,37 @@ blockquote b{
 label p{
     font-style: unset;
 }
+.row justify-content-center{
+    color: white;
+}
+
+button {
+    margin-inline: 20px;
+    background-color: #401201 ;
+    box-shadow: 5px 5px 10px #0D0D0D;
+    color: #ffffff;
+    border-radius: 8px;
+    height: 50px;
+    width: 100px;
+}
+
+.card{
+    justify-content: center;
+}
+
+input[type="email"], input[type="password"]{
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: 20px;
+    color: #0D0D0D;
+    background-color: #efe0cd;
+    padding: 10px;
+    box-shadow:5px 5px 10px #0D0D0D ;
+    border: 5px solid #0D0D0D;
+    resize: none;
+    border-radius: 8px;
+}
+
+
 
 /* Color Theme Swatches in Hex */
 /*
