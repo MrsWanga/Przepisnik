@@ -1,0 +1,274 @@
+body{
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: 20px;
+    background-color: #0D0D0D;
+}
+
+#container{
+    width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #0D0D0D;
+}
+
+header{
+    background: #401201;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.picture img{
+    box-shadow: 5px 5px 10px #0D0D0D;
+    border-radius: 8px;
+}
+
+nav{
+    background-color: #401201;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 50px;
+    padding-block: 20px;
+}
+
+#search{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-inline: 50px;
+    padding-block: 20px;
+}
+
+#search textarea{
+    float: left;
+    justify-content: space-evenly;
+}
+
+#search>.option:hover{
+    position: relative;
+    bottom: 3px;
+    transition: position 0.5s;
+}
+
+.option{
+    background-color: #BF7C41;
+    color: white ;
+    font-size: 25px;
+    float: left;
+    min-width: 50px;
+    padding: 10px;
+    padding-inline: 60px;
+    border-right: 3px dotted #ffffff;
+    border-left: 3px dotted #ffffff;
+    transition: background-color 0.5s;
+    box-shadow: 5px 5px 10px #0D0D0D;
+}
+
+#last-option{
+    border-right: none;
+}
+
+.option:hover{
+    background-color: #401201;
+    cursor: pointer;
+}
+
+h1{
+    background-color: #401201;
+    color: white;
+    text-align: center;
+    box-shadow: 5px 5px 10px #0D0D0D;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+h2, h3{
+    margin: 10px;
+}
+
+#article{
+    padding: 10px 20px 10px 30px;
+    text-align: center;
+    background-color: #D9B282;
+    color: #0D0D0D;
+    font-size: 30px;
+}
+
+.point{
+    padding: 10px 20px 10px 30px;
+    border-bottom: 3px dotted white;
+}
+
+h3{
+    margin-top: 0px;
+}
+
+.level{
+    float: left;
+}
+
+.level:hover{
+    box-shadow: 5px 5px 10px #401201;
+    color: white;
+    background-color: #401201;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+textarea{
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: 20px;
+    color: #0D0D0D;
+    background-color: #efe0cd;
+    padding: 10px;
+    box-shadow:5px 5px 10px #0D0D0D ;
+    border: 5px solid #0D0D0D;
+    resize: none;
+    border-radius: 8px;
+}
+
+#save{
+    margin-block: 10px;
+    padding: 30px 10px 20px 10px;
+    background-color: #401201 ;
+    box-shadow: 5px 5px 10px #0D0D0D;
+    color: #ffffff;
+    border-radius: 8px;
+    height: 100px;
+}
+
+body>footer{
+    color: white;
+    font-size: 20px;
+    background-color: #0D0D0D;
+    padding: 20px;
+    text-align: center;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    position: relative;
+    bottom: 3px;
+    transition: position 0.5s;
+}
+
+li:hover{
+    position: relative;
+    bottom: 3px;
+    transition: position 0.5s;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    padding: 10px;
+    display: block;
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+label::before {
+    background-color: white;
+    color: white;
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    border: 1px solid grey;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 28px;
+    transition-duration: 0.4s;
+    transform: scale(0);
+}
+
+label img {
+    height: 75px;
+    width: 75px;
+    transition-duration: 0.2s;
+    transform-origin: 50% 50%;
+    border-radius: 8px;
+}
+
+:checked+label {
+    border-color: #401201;
+}
+
+:checked+label::before {
+    content: "✓";
+    background-color: #401201 ;
+    transform: scale(1);
+}
+
+:checked+label img {
+    transform: scale(0.9);
+    box-shadow: 0 0 5px #333;
+    z-index: -1;
+}
+
+table{
+    box-shadow:5px 5px 10px #0D0D0D ;
+    border: 5px solid #0D0D0D;
+    border-spacing: 8px;
+    background-color: #efe0cd;
+    border-radius: 8px;
+    margin: auto;
+    align-self: center;
+}
+
+thead{
+    background-color: #401201;
+    color: white;
+}
+
+td img{
+    height: 100px;
+    width: 100px;
+}
+
+td, th{
+    border: 1px solid #0D0D0D;
+    padding: 10px;
+}
+
+blockquote{
+    text-align: center;
+}
+
+blockquote b{
+    color: #0D0D0D;
+    text-align: right;
+}
+
+label p{
+    font-style: unset;
+}
+
+/* Color Theme Swatches in Hex */
+/*
+{ color: #D9B282; }
+{ color: #BF7C41; }
+{ color: #8C4318; }
+{ color: #401201; }
+{ color: #0D0D0D; }
+*/

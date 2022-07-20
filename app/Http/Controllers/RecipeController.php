@@ -6,16 +6,23 @@ use Illuminate\Http\Request;
 
 class RecipeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        dd("test index");
+        return view('home');
     }
 
+    public function about()
+    {
+        return view('about');
+    }
+    public function add()
+    {
+        return view('add');
+    }
+    public function random()
+    {
+        return view('random');
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -23,7 +30,7 @@ class RecipeController extends Controller
      */
     public function create()
     {
-        dd("test create");
+        return view('add');
     }
 
     /**

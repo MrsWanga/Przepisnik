@@ -15,12 +15,17 @@ use App\Http\Controllers\RecipeController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
-Route::name('recipes.')->prefix('recipes')->group(function () {
-    Route::get('', [RecipeController::class, 'index'])
+    Route::get('index', [RecipeController::class, 'index'])
         ->name('index');
+    Route::get('about', [RecipeController::class, 'about'])
+        ->name('about');
+    Route::get('add', [RecipeController::class, 'add'])
+        ->name('add');
+    Route::get('random', [RecipeController::class, 'random'])
+        ->name('random');
     Route::get('create', [RecipeController::class, 'create'])
         ->name('create');
     Route::post('', [RecipeController::class, 'store'])
@@ -36,5 +41,5 @@ Route::name('recipes.')->prefix('recipes')->group(function () {
         ->where('id', '[0-9]+');
     Route::get('{id}/delete', [RecipeController::class, 'destroy'])
         ->name('destroy')
-        ->where('id', '[0-9]+');
-});
+        ->where(name: 'id', expression: '[0-9]+');
+
