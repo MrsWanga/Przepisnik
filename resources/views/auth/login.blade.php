@@ -3,17 +3,36 @@
 @extends('layouts.app')
 <body>
     @section('content')
-        <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="container">
+            <div class="row justify-content-center">
                 <div class="card">
-                    <div class="card-header"><h1> {{ __('Logowanie') }}</h1></div>
+                    <div class="card-header"><h1> {{ __('Logowanie') }}</h1>
+
+                        <div id="right-panel">
+                            <div class="option-right-panel">
+                                @if (Route::has('register'))
+                                    <a class="nav-link" href="{{ route('register') }}">
+                                        <img src="/Images/in.png" alt="" height="25px">
+                                        Zarejestruj się
+                                    </a>
+                                @endif
+                            </div>
+                            <div class="option-right-panel">
+                                @if (Route::has('password.request'))
+                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                        {{ __('Zapomniałeś hasła?') }}
+                                    </a>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="card-body">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
 
                             <div class="row mb-3">
-                                <label for="email" class="col-md-4 col-form-label text-md-end"><a>{{ __('Email') }}</a></label>
+                                <label for="email" class="col-md-4 col-form-label text-md-end"><p><b>{{ __('Email') }}</b></p></label>
 
                                 <div class="col-md-6">
                                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -27,7 +46,7 @@
                             </div>
 
                             <div class="row mb-3">
-                                <label for="password" class="col-md-4 col-form-label text-md-end"><a>{{ __('Hasło') }}</a></label>
+                                <label for="password" class="col-md-4 col-form-label text-md-end"><p><b>{{ __('Hasło') }}</b></p></label>
 
                                 <div class="col-md-6">
                                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
@@ -44,45 +63,27 @@
                                 <div class="col-md-6 offset-md-4">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="remember" id="remember" >
-
                                         <label class="form-check-label" for="remember">
-                                            <a>{{ __('Zapamiętaj mnie') }}</a>
+                                            <p>{{ __('Zapamiętaj mnie') }}</p>
                                         </label>
                                     </div>
                                 </div>
                             </div>
-
                             <div class="row mb-0">
                                 <div class="col-md-8 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
-                                        <b>
-                                            {{ __('Zaloguj') }}
-                                        </b>
-                                    </button>
-
-                                    @if (Route::has('password.request'))
-                                        <a class="btn btn-link" href="{{ route('password.request') }}">
-                                            {{ __('Zapomniałeś hasła?') }}
-                                        </a>
-                                    @endif
+                                    <div class="log-in">
+                                        <button type="submit">
+                                            <b>
+                                                {{ __('Zaloguj') }}
+                                            </b>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </form>
-
-                        @if (Route::has('register'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">
-                                    <div class="option">
-                                        <div id="last-option">
-                                            <img src="/Images/key.png" alt="" height="25px">
-                                            <br>Zarejestruj się
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        @endif
-
                     </div>
+
+                    <div style="clear: both;"></div>
                 </div>
             </div>
         </div>

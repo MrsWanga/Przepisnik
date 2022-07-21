@@ -39,7 +39,7 @@
                     <br>Strona główna
                 </div>
             </a>
-            <a href="/add">
+            <a href="/create">
                 <div class="option">
                     <img src="/Images/add.png" alt="" height="25px">
                     <br>Dodaj przepis

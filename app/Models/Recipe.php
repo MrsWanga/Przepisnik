@@ -12,7 +12,9 @@ class Recipe extends Model
 
     protected $fillable = [
         'name',
-        'description',
+        'ingredient',
+        'preparing',
+        'level'
     ];
 
     public function ingredients(): HasMany

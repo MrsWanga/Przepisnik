@@ -1,5 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="pl-PL">
+
 @extends('layouts.app')
     <body>
         @section('content')
@@ -31,21 +33,14 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td><img src="/Images/1star.png" alt="prosty"/></td>
-                        <th>Piernik</th>
-                        <td>Składniki Składniki Składniki Składniki</td>
-                    </tr>
-                    <tr>
-                        <td><img src="/Images/2stars.png" alt="Średnio zaawansowany"/></td>
-                        <th>Pychotka</th>
-                        <td>Składniki Składniki Składniki Składniki</td>
-                    </tr>
-                    <tr>
-                        <td><img src="/Images/3stars.png" alt="Zaawansowany"/></td>
-                        <th>Sernik</th>
-                        <td>Składniki Składniki Składniki Składniki</td>
-                    </tr>
+
+                    @foreach($recipes as $recipe)
+                        <tr>
+                            <td>{{ $recipe->level }}</td>
+                            <th>{{ $recipe->name }}</th>
+                            <td>{{ $recipe->ingredient }}</td>
+                        </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>

@@ -5,11 +5,14 @@ body{
 }
 
 .container{
-    width: 1400px;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
-    float: top;
     color: #0D0D0D;
+    padding: 10px 20px 10px 30px;
+    text-align: center;
+    background-color: #D9B282;
+    font-size: 30px;
 }
 
 header{
@@ -276,23 +279,31 @@ label p{
 
 button {
     margin-inline: 20px;
+    margin-block: 10px;
     background-color: #401201 ;
     box-shadow: 5px 5px 10px #0D0D0D;
     color: #ffffff;
     border-radius: 8px;
-    height: 50px;
-    width: 100px;
-}
-
-.card{
+    height: 20%;
+    width: 70%;
+    font-size: 30px;
+    padding-inline: 40px;
+    padding-block: 20px;
     justify-content: center;
 }
 
-input[type="email"], input[type="password"]{
+button:hover{
+    position: relative;
+    bottom: 3px;
+    transition: position 0.5s;
+    cursor: pointer;
+}
+
+input[type="email"], input[type="password"], input[type="text"]{
     font-family: 'Ibarra Real Nova', serif;
-    font-size: 20px;
+    font-size: 30px;
     color: #0D0D0D;
-    background-color: #efe0cd;
+    background-color: #efe0cd ;
     padding: 10px;
     box-shadow:5px 5px 10px #0D0D0D ;
     border: 5px solid #0D0D0D;
@@ -300,7 +311,104 @@ input[type="email"], input[type="password"]{
     border-radius: 8px;
 }
 
+.card-body{
+    background-color: #efe0cd ;
+    color: #0D0D0D;
+    box-shadow: 5px 5px 10px #0D0D0D ;
+    border: 5px solid #0D0D0D;
+    border-radius: 8px;
+    width: 50%;
+    height: 100%;
+    float: left;
+    margin-inline: 30px;
+}
 
+.form-check input{
+    width: 50%;
+    justify-self: center;
+    display: none;
+}
+
+.card-body p{
+    color: #0D0D0D;
+    justify-content: center;
+}
+
+.card-body a{
+    color: #0D0D0D;
+}
+
+.nav-link:hover img{
+    position: relative;
+    left: 5px;
+    transition: position 1s;
+}
+
+.nav-link, .btn, .btn-link a{
+    background-color: #e8f0fe;
+    box-shadow: 5px 5px 10px #0D0D0D ;
+    border: 5px solid #0D0D0D;
+    border-radius: 8px;
+    padding: 20px;
+    color: #0D0D0D;
+}
+
+a.nav-link:hover, a.btn:hover, a.btn-link:hover{
+    background-color: #401201;
+    color: white;
+    transition: background-color 0.5s;
+}
+
+bottom:active{
+    background-color: white;
+}
+
+#right-panel{
+    justify-content: space-around;
+    position: relative;
+    top: 100px;
+}
+.option-right-panel .nav-link{
+    position: relative;
+    top: 100px;
+    width: 500px;
+}
+.option-right-panel .btn-link{
+    position: relative;
+    top: 200px;
+}
+
+button.btn.btn-primary {
+    width: 50%;
+}
+/*.option-right-panel{*/
+/*    margin-inline: 50px;*/
+
+/*}*/
+
+
+/*.nav-link{*/
+/*    float: left;*/
+/*}*/
+/*.btn {*/
+/*    float: left;*/
+/*}*/
+
+/*.btn-link a{*/
+/*    float: top;*/
+/*}*/
+.log-in button{
+    background-color: #401201 ;
+    color: white;
+    width: 300px;
+    height: 80px;
+    margin-inline: 200px;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+}
 
 /* Color Theme Swatches in Hex */
 /*

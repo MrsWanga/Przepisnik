@@ -15,15 +15,15 @@ use App\Http\Controllers\RecipeController;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('index');
 });
 
     Route::get('index', [RecipeController::class, 'index'])
         ->name('index');
     Route::get('about', [RecipeController::class, 'about'])
         ->name('about');
-    Route::get('add', [RecipeController::class, 'add'])
-        ->name('add');
+//    Route::get('add', [RecipeController::class, 'add'])
+//        ->name('add');
     Route::get('random', [RecipeController::class, 'random'])
         ->name('random');
     Route::get('create', [RecipeController::class, 'create'])
