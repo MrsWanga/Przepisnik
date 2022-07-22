@@ -62,16 +62,6 @@
                     Zapisz przepis
                 </button>
             </form>
-
-
-
-
-                <a href="/index">
-                    <div id="save">
-                        <img src="/Images/save.png" alt="" height="50">
-                        <h3>Zapisz przepis</h3>
-                    </div>
-                </a>
         </div>
     @endsection
     </body>

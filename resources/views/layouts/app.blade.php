@@ -33,7 +33,7 @@
         </header>
 
         <nav>
-            <a href="/index">
+            <a href="/">
                 <div class="option">
                     <img src="/Images/home.png" alt="" height="25px">
                     <br>Strona główna

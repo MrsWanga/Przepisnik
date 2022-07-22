@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RecipeController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,16 +15,18 @@ use App\Http\Controllers\RecipeController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+//Route::get('/', function () {
+//    return view('index');
+//});
 
-    Route::get('index', [RecipeController::class, 'index'])
+    Route::get('/index', [RecipeController::class, 'index'])
+        ->name('index');
+    Route::get('/', [RecipeController::class, 'index'])
         ->name('index');
     Route::get('about', [RecipeController::class, 'about'])
         ->name('about');
-//    Route::get('add', [RecipeController::class, 'add'])
-//        ->name('add');
+    Route::get('add', [RecipeController::class, 'add'])
+        ->name('add');
     Route::get('random', [RecipeController::class, 'random'])
         ->name('random');
     Route::get('create', [RecipeController::class, 'create'])
@@ -39,11 +42,14 @@ Route::get('/', function () {
     Route::patch('{id}', [RecipeController::class, 'update'])
         ->name('update')
         ->where('id', '[0-9]+');
-    Route::get('{id}/delete', [RecipeController::class, 'destroy'])
+    Route::get('delete/{id}', [RecipeController::class, 'destroy'])
         ->name('destroy')
         ->where(name: 'id', expression: '[0-9]+');
+
+    Route::get('search', [RecipeController::class, 'search'])
+        ->name('search');
 
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -45,11 +45,6 @@
                 </a>
                 <div style="clear: both;"></div>
             </div>
-
-            <footer>
-                &copy; Copyright by MrsWanga 2022. Wszelkie prawa zastrzeżone.
-            </footer>
-
         </div>
   @endsection
     </body>

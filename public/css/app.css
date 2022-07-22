@@ -130,7 +130,6 @@ textarea{
     padding: 10px;
     box-shadow:5px 5px 10px #0D0D0D ;
     border: 5px solid #0D0D0D;
-    resize: none;
     border-radius: 8px;
 }
 
@@ -284,7 +283,6 @@ button {
     box-shadow: 5px 5px 10px #0D0D0D;
     color: #ffffff;
     border-radius: 8px;
-    height: 20%;
     width: 70%;
     font-size: 30px;
     padding-inline: 40px;

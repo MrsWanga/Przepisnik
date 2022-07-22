@@ -10,7 +10,8 @@ class Recipe extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
+    public $fillable = [
+        'id',
         'name',
         'ingredient',
         'preparing',
